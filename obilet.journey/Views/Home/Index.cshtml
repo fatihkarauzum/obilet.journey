@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="search-container">
+    <div class="container">
+        <div class="search-panel">
+            <div class="row">
+                <form action="~/home/SearchJourneys" method="post" id="searchJourney">
+                    <div class="col-md-12 pd-20-20-0-20">
+                        <div class="form-group">
+                            <label for="origin" class="font-weight-bold text-primary">Nereden</label>
+
+                            <div class="input-group mb-2" id="origin-input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-street-view" aria-hidden="true"></i></div>
+                                </div>
+
+                                <input type="text" hidden id="origin-name" name="originName" />
+                                <select required class="form-control form-control-lg searchable-select origin" id="origin" name="originId" onchange="handleChangeLocation('origin', 'origin-name')">
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group float-right pd-0-20">
+                            <button type="button" class="btn btn-primary btn-sm float-right" onclick="changeLocation()"><i class="fa fa-exchange"></i></button>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12 pd-20">
+                        <div class="form-group">
+                            <label for="destination" class="font-weight-bold text-primary">Nereye</label>
+
+                            <div class="input-group mb-2" id="destination-input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-map-marker" style="padding-right: 0.3rem !important;" aria-hidden="true"></i></div>
+                                </div>
+
+                                <input type="text" hidden id="destination-name" name="destinationName" />
+                                <select required class="form-control form-control-lg searchable-select destination" id="destination" name="destinationId" onchange="handleChangeLocation('destination', 'destination-name')">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 pd-0-20-20-20">
+                        <div class="form-group">
+                            <label for="departureDate" class="font-weight-bold text-primary">Tarih</label>
+
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+                                </div>
+                                <input required type="datetime-local" class="form-control" id="departureDate" name="departureDate" max="2030-12-31" min="2023-03-14T23:20:20">
+
+                                <button type="button" class="btn btn-primary ml-1" onclick="getToday()">Bugün</button>
+                                <button type="button" class="btn btn-primary ml-1" onclick="getTomorrow()">Yarın</button>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 pd-0-20-20-20">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Bileti Bul</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/location.js"></script>
+    <script src="~/js/storage.js"></script>
+    <script src="~/js/date.js"></script>
+}

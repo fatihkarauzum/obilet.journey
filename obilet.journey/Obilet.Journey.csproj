@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.4" />
+    <PackageReference Include="MyCSharp.HttpUserAgentParser.AspNetCore" Version="2.0.1" />
+    <PackageReference Include="Serilog" Version="2.12.0" />
+    <PackageReference Include="Serilog.Sinks.Graylog" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Obilet.Business\Obilet.Business.csproj" />
+    <ProjectReference Include="..\Obilet.Common\Obilet.Common.csproj" />
+    <ProjectReference Include="..\Obilet.Core\Obilet.Core.csproj" />
+    <ProjectReference Include="..\Obilet.Model\Obilet.Model.csproj" />
+  </ItemGroup>
+
+</Project>

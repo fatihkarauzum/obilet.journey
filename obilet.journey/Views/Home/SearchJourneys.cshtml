@@ -1,0 +1,52 @@
+﻿@using Obilet.Journey.Models.ViewModels;
+
+@model JourneysViewModel
+@{
+    ViewData["Title"] = "SearchJourneys";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="journey-container">
+    <div class="journey-head">
+        <div class="back-container">
+            <a class="flex" href="#" onclick="window.history.back(); return false;">
+                <img class="back" src="~/asset/icons/back-icon.svg" />
+            </a>
+        </div>
+        <div class="origin-destination-container">
+            <div>
+                <span>@Model.OriginName - @Model.DestinationName</span>
+            </div>
+            <div>
+                <span id="departure-date" />
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        @foreach (var journey in Model.Journeys) {
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-8">
+                            <p style="font-size:10px"><span style="margin-right: 30px">KALKIŞ</span><span>VARIŞ</span></p>
+                            <p class="font-weight-bold"> @journey.JourneyDetail.Departure.ToString("HH:mm") <i class="fa fa-long-arrow-right"></i> @journey.JourneyDetail.Arrival.ToString("HH:mm")</p>
+                        </div>
+                        <div class="col-4">
+                            <small class="btn btn-danger price" type="button" name="name">@journey.JourneyDetail.OriginalPrice @journey.JourneyDetail.Currency</small>
+                        </div>
+                    </div>
+
+                    <p class="card-text">@journey.JourneyDetail.Origin - @journey.JourneyDetail.Destination </p>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+        <script>
+            $('#departure-date').text(moment('@Model.DepartureDate.ToString("yyyy-MM-ddTHH:mm:ss")').format('Do MMMM dddd'))
+        </script>
+}

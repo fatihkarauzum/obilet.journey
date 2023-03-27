@@ -1,0 +1,158 @@
+html {
+    font-size: 14px;
+    background: #f2f3f4;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem #ff7373, 0 0 0 0.1rem #ff9d9d;
+}
+
+body {
+    font-family: 'Montserrat', serif;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.main {
+    background-color: #f2f3f4 !important;
+}
+
+.navbar {
+    background-color: #d23b38 !important;
+    height: 5em;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    width: 100%;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-width: 0 !important;
+}
+
+.navbar-brand {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    display: flex;
+    width: 100%;
+}
+
+.logo {
+    width: 200px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 0.5em;
+    max-width: 900px;
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        max-width: 400px !important;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .container {
+        max-width: 600px !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 900px !important;
+    }
+}
+
+.back {
+    width: 30px
+}
+
+.search-container {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-position: center center;
+    background-size: cover;
+    background-color: #f2f3f4 !important;
+}
+
+.search-panel {
+    border-radius: 0.5em;
+    background: #fff;
+}
+
+.journey-head {
+    background: #5d686e;
+    height: 72px;
+    margin-bottom: 20px
+}
+
+.price {
+    float: right;
+    cursor: none !important;
+}
+
+.back-container {
+    float: left;
+    height: 100%;
+    display: flex;
+    padding-left: 20px;
+}
+
+.flex {
+    display: flex;
+}
+
+.origin-destination-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #fff;
+}
+
+.pd-20 {
+    padding: 20px;
+}
+
+.pd-0-20-20-20 {
+    padding: 0px 20px 20px 20px;
+}
+
+.pd-20-20-0-20 {
+    padding: 20px 20px 0px 20px;
+}
+
+.pd-0-20 {
+    padding: 0px 20px;
+}
+
+.float-right {
+    float: right;
+}
+
+.input-group-text {
+    padding: 0.62rem 0.75rem !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.btn-primary {
+    background-color: #d23b38 !important;
+    border-color: #d23b38 !important;
+}
+
+.text-primary {
+    color: #818181 !important;
+}
